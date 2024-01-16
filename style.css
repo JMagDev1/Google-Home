@@ -225,10 +225,10 @@ body, html {
         width: 20vw;
         height: 8vh;
         font-size: 12px;
-        border: solid white;
+        border: solid black;
         border-radius: 10vw;
         background: transparent;
-        color: white;
+        color: black;
     }
 	/*Big smartphones [426px -> 600px]*/
 }
@@ -254,10 +254,10 @@ body, html {
         width: 20vw;
         height: 8vh;
         font-size: 12px;
-        border: solid white;
+        border: solid black;
         border-radius: 10vw;
         background: transparent;
-        color: white;
+        color: black;
     }
 	/*Small smartphones [325px -> 425px]*/
 }
