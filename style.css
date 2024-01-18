@@ -14,45 +14,6 @@ body, html {
     filter: brightness(45%);
 }
 
-.JXU{
-    filter: brightness(55%);
-}
-
-.carousel {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.slide {
-    position: absolute;
-    width: 100vw;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-}
-
-.slide > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0.1ms;
-}
-
 .carousel-button {
     position: absolute;
     z-index: 2;
@@ -71,7 +32,7 @@ body, html {
 .carousel-button:hover,
 .carousel-button:focus {
     color: white;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .carousel-button:focus {
@@ -96,6 +57,11 @@ body, html {
     color: whitesmoke;
     padding: 10px;
     border-radius: 5px;
+    border-color: white;
+}
+
+#txt:active{
+    border-color: whitesmoke;
 }
 
 .txtbx-1{
@@ -195,11 +161,16 @@ body, html {
     .link{
         width: 10vw;
         height: 8vh;
-        font-size: 12px;
+        font-size: 10px;
         border: solid white;
         border-radius: 10vw;
         background: transparent;
         color: white;
+    }
+
+    .LinkToSite,
+    .LinkToWeatherSite{
+        display: none;
     }
     /*Tablets [601px -> 1200px]*/
 }
@@ -223,12 +194,17 @@ body, html {
     
     .link{
         width: 20vw;
-        height: 8vh;
+        height: 4vh;
         font-size: 12px;
-        border: solid black;
+        border: solid whitesmoke;
         border-radius: 10vw;
         background: transparent;
-        color: black;
+        color: white;
+    }
+
+    .LinkToSite,
+    .LinkToWeatherSite{
+        display: none;
     }
 	/*Big smartphones [426px -> 600px]*/
 }
@@ -252,12 +228,17 @@ body, html {
     
     .link{
         width: 20vw;
-        height: 8vh;
+        height: 4vh;
         font-size: 12px;
-        border: solid black;
+        border: solid white;
         border-radius: 10vw;
         background: transparent;
-        color: black;
+        color: white;
+    }
+
+    .LinkToSite,
+    .LinkToWeatherSite{
+        display: none;
     }
 	/*Small smartphones [325px -> 425px]*/
 }

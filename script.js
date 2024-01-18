@@ -1,12 +1,17 @@
+window.onload = function GetBGImage(){
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "landscape" + "')";
+  startTime();
+}
+
 function startTime(){
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-    setTimeout(startTime, 1000);
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
 }
   
 function checkTime(i){
@@ -14,24 +19,17 @@ function checkTime(i){
     return i;
 }
 
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-//CAROUSEL!!
-const buttons = document.querySelectorAll("[data-carousel-button]");
+var num = 0;
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
+prevBtn.addEventListener('click', function(){
+  num++;
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "random&"+ num + "')";})
 
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
-
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  })
+nextBtn.addEventListener('click', function(){
+  num++;
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "random&" + num + "')";
 })
 
