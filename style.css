@@ -60,9 +60,6 @@ body, html {
     border-color: white;
 }
 
-#txt:active{
-    border-color: whitesmoke;
-}
 
 .txtbx-1{
     position: absolute;
@@ -70,11 +67,11 @@ body, html {
     left: 25%;
     font-family: 'Trebuchet MS';
     font-size: 25px;
-    border: solid whitesmoke;
+    border: solid white;
     border-radius: 20px;
     width: 50%;
     background-color:transparent;
-    color: whitesmoke;
+    color: white;
 
 }
 
@@ -83,12 +80,16 @@ body, html {
 }
 
 .txtbx-1::placeholder{
-    color: whitesmoke;
+    color: white;
 }
 
 .txtbx-1{
     padding-left: 1vw;
 }
+
+input[type=text]:active {
+    border: solid white;
+  }
 
 .links-container{
     position: absolute;
@@ -196,7 +197,7 @@ body, html {
         width: 20vw;
         height: 4vh;
         font-size: 12px;
-        border: solid whitesmoke;
+        border: solid white;
         border-radius: 10vw;
         background: transparent;
         color: white;

@@ -1,6 +1,8 @@
 window.onload = function GetBGImage(){
   document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "landscape" + "')";
   startTime();
+
+  document.querySelector('input').autofocus();
 }
 
 function startTime(){
