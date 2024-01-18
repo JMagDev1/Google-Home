@@ -26,10 +26,10 @@ var num = 0;
 
 prevBtn.addEventListener('click', function(){
   num++;
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "random&"+ num + "')";})
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/3840x2160/?" + "landscape&"+ num + "')";})
 
 nextBtn.addEventListener('click', function(){
   num++;
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x1000/?" + "random&" + num + "')";
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/3840x2160/?" + "landscape&" + num + "')";
 })
 
