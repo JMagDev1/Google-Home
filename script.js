@@ -28,7 +28,8 @@ var num = 0;
 
 prevBtn.addEventListener('click', function(){
   num++;
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1080/?" + "landscape&"+ num + "')";})
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1080/?" + "landscape&"+ num + "')";
+})
 
 nextBtn.addEventListener('click', function(){
   num++;
