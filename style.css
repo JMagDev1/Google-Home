@@ -152,7 +152,7 @@ input[type=text]:active {
     .links-container{
         position: absolute;
         top: 40%;
-        left: 22%;
+        left: 25%;
         width: 65vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -186,7 +186,7 @@ input[type=text]:active {
     .links-container{
         position: absolute;
         top: 40%;
-        left: 22%;
+        left: 25%;
         width: 65vw;
         display: grid;
         grid-template-columns: 1fr 1fr ;
@@ -220,7 +220,7 @@ input[type=text]:active {
     .links-container{
         position: absolute;
         top: 40%;
-        left: 22%;
+        left: 25%;
         width: 65vw;
         display: grid;
         grid-template-columns: 1fr 1fr ;
