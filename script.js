@@ -1,11 +1,26 @@
 var width = screen.width;
 var height = screen.height;
 
-window.onload = function GetBGImage(){
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/" + width + "x" + height+ "/?" + "landscape')";
-  startTime();
+var containers = document.querySelectorAll('.container');
 
-  document.querySelector('input').autofocus();
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the elements with the class "container"
+  
+
+  // Check if any element was found
+  if (containers.length > 0) {
+    // Set the color for each container
+    containers.forEach(function(container) {
+      container.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
+    });
+  } else {
+    console.error('No element with class "container" found on the page.');
+  }
+});
+
+window.onload = function GetBGImage(){
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/" + width + "x" + height+ "/?" + "landscape&')";
+  startTime();
 }
 
 function startTime(){
