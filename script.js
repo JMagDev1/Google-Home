@@ -36,7 +36,6 @@ window.onload = function GetBGImage() {
     if (containerElements.length > 0) {
       containerElements[0].style.display = "block";
     }
-
     startTime();
   };
 

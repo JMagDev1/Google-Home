@@ -19,7 +19,8 @@
     </div>
 
     <div class="container" id="BtnContainer">
-        <div class="backgroundFilter">
+        <div class="backgroundFilter">            
+
             <div class="carousel background" data-carousel>
                 <button id="prev" class="carousel-button prev" data-carousel-button="prev"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></button>
                 <button id="next" class="carousel-button next" data-carousel-button="next"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></button>
@@ -31,7 +32,7 @@
             <form action="https://www.google.com/search?q=" method="get">
     
             <div class="txtbx">
-                <input class="txtbx-1"  type="text" name="q" placeholder="Search Here">
+                <input class="txtbx-1"  type="text" name="q" placeholder="Search">
             </div>
     
             <div class="links-container">
@@ -67,6 +68,29 @@
     
   <script src="script.js"></script> 
 
-    
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        const options = {
+        bottom: '90vh', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '2vw', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: 'transparent',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: false, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+        }
+        
+        function addDarkmodeWidget() {
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+
+
 </body>
 </html>

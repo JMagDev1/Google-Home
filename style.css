@@ -4,6 +4,10 @@ body, html {
     overflow: hidden;
 }
 
+.darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+}
+
 .container {
     position: relative;
     display: none;
@@ -15,6 +19,14 @@ body, html {
     align-items: center;
     padding-top: 20%;
     background: transparent;
+}
+
+#darkModeToggle{
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    height: 5vh;
+    display: flex;
 }
 
 .background {
@@ -205,7 +217,7 @@ input[type=text]:active {
     .link{
         width: 20vw;
         height: 4vh;
-        font-size: 12px;
+        font-size: 10px;
         border: solid white;
         border-radius: 10vw;
         background: transparent;
@@ -239,7 +251,7 @@ input[type=text]:active {
     .link{
         width: 20vw;
         height: 4vh;
-        font-size: 12px;
+        font-size: 8px;
         border: solid white;
         border-radius: 10vw;
         background: transparent;
