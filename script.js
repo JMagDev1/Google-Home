@@ -18,10 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-window.onload = function GetBGImage(){
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/" + width + "x" + height+ "/?" + "landscape&')";
-  startTime();
-}
+window.onload = function GetBGImage() {
+  var img = new Image();
+  img.src = "https://source.unsplash.com/" + width + "x" + height + "/?" + "landscape&";
+
+  // Event handler for when the image is loaded
+  img.onload = function () {
+    // Set the background image for the body
+    document.body.style.backgroundImage = "url('" + img.src + "')";
+
+    setTimeout(1500);
+
+    document.getElementById("overlay").style.display = "none";
+
+    // Show container
+    var containerElements = document.getElementsByClassName("container");
+    if (containerElements.length > 0) {
+      containerElements[0].style.display = "block";
+    }
+
+    startTime();
+  };
+
+};
+
 
 function startTime(){
   const today = new Date();
@@ -47,13 +67,35 @@ var num = 0;
 var width = screen.width;
 var height = screen.height;
 
-prevBtn.addEventListener('click', function(){
-  num++;
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/" + width + "x" + height+ "/?" + "landscape&"+ num + "')";
-})
+function updateBackground() {
+  document.getElementById("BtnContainer").style.display = "none";
+  document.body.backgroundColor = "white";
+  // Display the overlay
+  document.getElementById("overlay").style.display = "flex";
 
-nextBtn.addEventListener('click', function(){
+  // Increment the num variable
   num++;
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/" + width + "x" + height+ "/?" + "landscape&"+ num + "')";
-})
+
+  // Create a new image element
+  var img = new Image();
+
+  // Event handler for when the image is loaded
+  img.onload = function () {
+    // Set the background image for the body
+    document.body.style.backgroundImage = "url('" + img.src + "')";
+
+    // Hide the overlay
+    document.getElementById("overlay").style.display = "none";
+    setTimeout(1500);
+    document.getElementById("BtnContainer").style.display = "block";    
+    
+  };
+
+  // Set the source of the image
+  img.src = "https://source.unsplash.com/" + width + "x" + height + "/?" + "landscape&" + num;
+}
+
+prevBtn.addEventListener('click', updateBackground);
+nextBtn.addEventListener('click', updateBackground);
+
 

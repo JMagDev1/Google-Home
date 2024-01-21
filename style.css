@@ -6,6 +6,14 @@ body, html {
 
 .container {
     position: relative;
+    display: none;
+}
+
+#overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
 }
 
 .background {
