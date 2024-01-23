@@ -37,6 +37,8 @@ window.onload = function GetBGImage() {
       containerElements[0].style.display = "block";
     }
     startTime();
+    var DarkModeActive = false;
+    LightMode();
   };
 
 };
@@ -101,41 +103,132 @@ nextBtn.addEventListener('click', updateBackground);
 const DarkBtn = document.getElementById("BtnDarkMode");
 const LightBtn = document.getElementById("BtnLightMode");
 
-var DarkModeActive = true;
+var DarkModeActive = false;
 
 DarkBtn.addEventListener('click', function(){
   DarkModeActive = true;
-  if(DarkModeActive == true){
-    alert("Dark Mode Active");
-    document.getElementById("Link").style.color = "black";
-    document.getElementById("Link").style.border = "solid";
-    document.getElementById("Link").style.border.color = "black";
-    document.getElementById("txt").style.color = "black";
-    document.getElementById("txtbx-1").style.color = "black";
-    document.getElementById("txtbx-1").style.border = "solid";
-    document.getElementById("txtbx-1").style.border.color = "black";
-    document.getElementById("moon").style.fill = "black";
-    document.getElementById("sun").style.fill = "black";
-    document.getElementById("weather").style.fill = "black";
-    document.getElementById("SearchBarInput").style.fill = "black";
-
-  }
+  DarkMode();
 })
 
 LightBtn.addEventListener('click', function(){
   DarkModeActive = false;
-  if(DarkModeActive == false){
-    alert("Light Mode Active")
+  LightMode();
+})
+
+function DarkMode(){
+    document.getElementById("Link").style.color = "black";
+    document.getElementById("Link").style.border = "solid";
+    document.getElementById("Link").style.border.color = "black";
+    document.getElementById("Link1").style.color = "black";
+    document.getElementById("Link1").style.border = "solid";
+    document.getElementById("Link1").style.border.color = "black";
+    document.getElementById("Link2").style.color = "black";
+    document.getElementById("Link2").style.border = "solid";
+    document.getElementById("Link2").style.border.color = "black";
+    document.getElementById("Link3").style.color = "black";
+    document.getElementById("Link3").style.border = "solid";
+    document.getElementById("Link3").style.border.color = "black";
+    document.getElementById("Link4").style.color = "black";
+    document.getElementById("Link4").style.border = "solid";
+    document.getElementById("Link4").style.border.color = "black";
+    document.getElementById("Link5").style.color = "black";
+    document.getElementById("Link5").style.border = "solid";
+    document.getElementById("Link5").style.border.color = "black";
+    document.getElementById("Link6").style.color = "black";
+    document.getElementById("Link6").style.border = "solid";
+    document.getElementById("Link6").style.border.color = "black";
+    document.getElementById("Link7").style.color = "black";
+    document.getElementById("Link7").style.border = "solid";
+    document.getElementById("Link7").style.border.color = "black";
+    document.getElementById("Link8").style.color = "black";
+    document.getElementById("Link8").style.border = "solid";
+    document.getElementById("Link8").style.border.color = "black";
+    document.getElementById("Link9").style.color = "black";
+    document.getElementById("Link9").style.border = "solid";
+    document.getElementById("Link9").style.border.color = "black";
+    document.getElementById("Link10").style.color = "black";
+    document.getElementById("Link10").style.border = "solid";
+    document.getElementById("Link10").style.border.color = "black";
+    document.getElementById("Link11").style.color = "black";
+    document.getElementById("Link11").style.border = "solid";
+    document.getElementById("Link11").style.border.color = "black";
+    document.getElementById("Link12").style.color = "black";
+    document.getElementById("Link12").style.border = "solid";
+    document.getElementById("Link12").style.border.color = "black";
+    document.getElementById("Link13").style.color = "black";
+    document.getElementById("Link13").style.border = "solid";
+    document.getElementById("Link13").style.border.color = "black";
+    document.getElementById("Link14").style.color = "black";
+    document.getElementById("Link14").style.border = "solid";
+    document.getElementById("Link14").style.border.color = "black";
+    document.getElementById("Link15").style.color = "black";
+    document.getElementById("Link15").style.border = "solid";
+    document.getElementById("Link15").style.border.color = "black";
+  
+    document.getElementById("txt").style.color = "black";
+
+    document.getElementById("moon").style.fill = "black";
+    document.getElementById("sun").style.fill = "black";
+    document.getElementById("weather").style.fill = "black";
+}
+
+function LightMode(){
     document.getElementById("Link").style.color = "white";
     document.getElementById("Link").style.border = "solid";
     document.getElementById("Link").style.border.color = "white";
+    document.getElementById("Link1").style.color = "white";
+    document.getElementById("Link1").style.border = "solid";
+    document.getElementById("Link1").style.border.color = "white";
+    document.getElementById("Link2").style.color = "white";
+    document.getElementById("Link2").style.border = "solid";
+    document.getElementById("Link2").style.border.color = "white";
+    document.getElementById("Link3").style.color = "white";
+    document.getElementById("Link3").style.border = "solid";
+    document.getElementById("Link3").style.border.color = "white";
+    document.getElementById("Link4").style.color = "white";
+    document.getElementById("Link4").style.border = "solid";
+    document.getElementById("Link4").style.border.color = "white";
+    document.getElementById("Link5").style.color = "white";
+    document.getElementById("Link5").style.border = "solid";
+    document.getElementById("Link5").style.border.color = "white";
+    document.getElementById("Link6").style.color = "white";
+    document.getElementById("Link6").style.border = "solid";
+    document.getElementById("Link6").style.border.color = "white";
+    document.getElementById("Link7").style.color = "white";
+    document.getElementById("Link7").style.border = "solid";
+    document.getElementById("Link7").style.border.color = "white";
+    document.getElementById("Link8").style.color = "white";
+    document.getElementById("Link8").style.border = "solid";
+    document.getElementById("Link8").style.border.color = "white";
+    document.getElementById("Link9").style.color = "white";
+    document.getElementById("Link9").style.border = "solid";
+    document.getElementById("Link9").style.border.color = "white";
+    document.getElementById("Link10").style.color = "white";
+    document.getElementById("Link10").style.border = "solid";
+    document.getElementById("Link10").style.border.color = "white";
+    document.getElementById("Link11").style.color = "white";
+    document.getElementById("Link11").style.border = "solid";
+    document.getElementById("Link11").style.border.color = "white";
+    document.getElementById("Link12").style.color = "white";
+    document.getElementById("Link12").style.border = "solid";
+    document.getElementById("Link12").style.border.color = "white";
+    document.getElementById("Link13").style.color = "white";
+    document.getElementById("Link13").style.border = "solid";
+    document.getElementById("Link13").style.border.color = "white";
+    document.getElementById("Link14").style.color = "white";
+    document.getElementById("Link14").style.border = "solid";
+    document.getElementById("Link14").style.border.color = "white";
+    document.getElementById("Link15").style.color = "white";
+    document.getElementById("Link15").style.border = "solid";
+    document.getElementById("Link15").style.border.color = "white";
+
     document.getElementById("txt").style.color = "white";
-    document.getElementById("txtbx-1").style.color = "white";
-    document.getElementById("txtbx-1").style.border = "solid";
-    document.getElementById("txtbx-1").style.border.color = "white";
+
+    document.getElementsByClassName("txtbx-1").style.color = "white"
+    document.getElementsByClassName("txtbx-1").style.border.color = "white";
+
     document.getElementById("moon").style.fill = "white";
     document.getElementById("sun").style.fill = "white";
     document.getElementById("weather").style.fill = "white";
-    document.getElementById("SearchBarInput").style.fill = "white";
-  }
-})
+  
+}
