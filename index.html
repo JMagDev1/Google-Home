@@ -19,11 +19,16 @@
     </div>
 
     <div class="container" id="BtnContainer">
-        <div class="backgroundFilter">            
+        <div class="backgroundFilter">   
+            
+            <div class="DarkModeToggleContainer">
+                <button id="BtnDarkMode"><svg id="moon" stroke="currentColor" fill="white" stroke-width="0.5px" viewBox="0 0 16 16" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.53 10.53a7 7 0 01-9.058-9.058A7.003 7.003 0 008 15a7.002 7.002 0 006.53-4.47z" clip-rule="evenodd"></path></svg></button>
+                <button id="BtnLightMode"><svg id="sun" stroke="currentColor" fill="white" stroke-width="0.5px" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19H12.998V22H10.998zM10.998 2H12.998V5H10.998zM1.998 11H4.998V13H1.998zM18.998 11H21.998V13H18.998z"></path><path transform="rotate(-45.017 5.986 18.01)" d="M4.487 17.01H7.487V19.01H4.487z"></path><path transform="rotate(-45.001 18.008 5.99)" d="M16.508 4.99H19.509V6.99H16.508z"></path><path transform="rotate(-134.983 5.988 5.99)" d="M4.487 4.99H7.487V6.99H4.487z"></path><path transform="rotate(134.999 18.008 18.01)" d="M17.008 16.51H19.008V19.511000000000003H17.008z"></path></svg></button>
+            </div>
 
             <div class="carousel background" data-carousel>
-                <button id="prev" class="carousel-button prev" data-carousel-button="prev"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></button>
-                <button id="next" class="carousel-button next" data-carousel-button="next"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></button>
+                <button type="button" id="prev" class="carousel-button prev" data-carousel-button="prev"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></button>
+                <button type="button" id="next" class="carousel-button next" data-carousel-button="next"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="0.5em" width="0.5em" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></button>
             </div>
             
     
@@ -32,65 +37,38 @@
             <form action="https://www.google.com/search?q=" method="get">
     
             <div class="txtbx">
-                <input class="txtbx-1"  type="text" name="q" placeholder="Search">
+                <input id="SearchBarInput" class="txtbx-1"  type="text" name="q" placeholder="Search">
             </div>
     
             <div class="links-container">
-                <button type="button" class="link" onclick="window.open('https://mail.google.com/mail/u/0/#inbox', '_blank')">Gmail</button>
-                <button type="button" class="link" onclick="window.open('https://www.ccea.org.uk', '_blank')">CCEA</button>
-                <button type="button" class="link" onclick="window.open('https://www.amazon.co.uk', '_blank')">Amazon</button>
-                <button type="button" class="link" onclick="window.open('https://cad.onshape.com/signin', '_blank')">Onshape</button>
+                <button id="Link" type="button" class="link" onclick="window.open('https://mail.google.com/mail/u/0/#inbox', '_blank')">Gmail</button>
+                <button id="Link1" type="button" class="link" onclick="window.open('https://www.ccea.org.uk', '_blank')">CCEA</button>
+                <button id="Link2" type="button" class="link" onclick="window.open('https://www.amazon.co.uk', '_blank')">Amazon</button>
+                <button id="Link3" type="button" class="link" onclick="window.open('https://cad.onshape.com/signin', '_blank')">Onshape</button>
     
-                <button type="button" class="link" onclick="window.open('https://assetstore.unity.com/', '_blank')">Unity Asset Store</button>
-                <button type="button" class="link" onclick="window.open('https://www.youtube.com', '_blank')">YouTube</button>
-                <button type="button" class="link" onclick="window.open('https://studio.youtube.com/', '_blank')">YouTube Studio</button>
-                <button type="button" class="link" onclick="window.open('https://www.github.com', '_blank')">GitHub</button>
-    
+                <button id="Link4" type="button" class="link" onclick="window.open('https://assetstore.unity.com/', '_blank')">Unity Asset Store</button>
+                <button id="Link5" type="button" class="link" onclick="window.open('https://www.youtube.com', '_blank')">YouTube</button>
+                <button id="Link6" type="button" class="link" onclick="window.open('https://studio.youtube.com/', '_blank')">YouTube Studio</button>
+                <button id="Link7" type="button" class="link" onclick="window.open('https://www.github.com', '_blank')">GitHub</button>
                 
-                <button type="button" class="link" onclick="window.open('https://classroom.google.com/u/1/h', '_blank')">Classroom</button>
-                <button type="button" class="link" onclick="window.open('https://ids.c2kschools.net/nidp/idff/sso?id=3&sid=0&option=credential&sid=0', '_blank')">My School</button>
-                <button type="button" class="link" onclick="window.open('https://UCAS.com/', '_blank')">UCAS</button>
-                <button type="button" class="link" onclick="window.open('https://realtimecolors.com/', '_blank')">RealTime Colours</button>
+                <button id="Link8" type="button" class="link" onclick="window.open('https://classroom.google.com/u/1/h', '_blank')">Classroom</button>
+                <button id="Link9" type="button" class="link" onclick="window.open('https://ids.c2kschools.net/nidp/idff/sso?id=3&sid=0&option=credential&sid=0', '_blank')">My School</button>
+                <button id="Link10" type="button" class="link" onclick="window.open('https://UCAS.com/', '_blank')">UCAS</button>
+                <button id="Link11" type="button" class="link" onclick="window.open('https://realtimecolors.com/', '_blank')">RealTime Colours</button>
                 
-                <button type="button" class="link" onclick="window.open('https://thingiverse.com/', '_blank')">Thingiverse</button>
-                <button type="button" class="link" onclick="window.open('https://docs.google.com/document/?usp=docs_alc&authuser=0', '_blank')">Docs</button>
-                <button type="button" class="link" onclick="window.open('https://unsplash.com', '_blank')">Unsplash</button>
-                <button type="button" class="link" onclick="window.open('https://new.express.adobe.com/tools/remove-background', '_blank')">Background Remover</button>
+                <button id="Link12" type="button" class="link" onclick="window.open('https://thingiverse.com/', '_blank')">Thingiverse</button>
+                <button id="Link13" type="button" class="link" onclick="window.open('https://docs.google.com/document/?usp=docs_alc&authuser=0', '_blank')">Docs</button>
+                <button id="Link14" type="button" class="link" onclick="window.open('https://unsplash.com', '_blank')">Unsplash</button>
+                <button id="Link15" type="button" class="link" onclick="window.open('https://new.express.adobe.com/tools/remove-background', '_blank')">Background Remover</button>
             </div>        
         </div>
 
         <div class="LinkToSite"><a onclick="window.open('https://jmagdev1.github.io/JMagDev1OriginalWebsite/', '_blank')"><img src="Images/WebsiteLink.png" alt="Link to website"></a></div>
-        <div class="LinkToWeatherSite"><a onclick="window.open('https://jmagdev1.github.io/Weather-App/', '_blank')"><svg stroke="currentColor" fill="white" stroke-width="0" version="1.2" baseProfile="larger" viewBox="0 0 24 24" height="2.5em" width="2.5em" xmlns="http://www.w3.org/2000/svg"><g><path d="M13 4l-1 2.934-1-2.934c-.188-.553.106-1.152.659-1.341.552-.188 1.153.107 1.341.659.078.23.072.469 0 .682zM4 11l2.934 1-2.934 1c-.553.188-1.152-.106-1.341-.659-.188-.552.107-1.153.659-1.341.23-.078.469-.072.682 0zM11 20l1-2.934 1 2.934c.188.553-.106 1.152-.659 1.341-.552.188-1.152-.106-1.341-.659-.078-.23-.072-.469 0-.682zM20 12.998l-2.934-1 2.934-1c.553-.188 1.152.106 1.341.659.188.552-.106 1.152-.659 1.341-.23.078-.469.072-.682 0zM7.05 5.636l1.367 2.781-2.781-1.367c-.524-.257-.74-.891-.483-1.414.258-.523.891-.739 1.414-.482.218.107.383.28.483.482zM5.636 16.949l2.781-1.367-1.367 2.781c-.257.523-.891.739-1.414.482-.523-.258-.739-.891-.482-1.414.107-.218.28-.382.482-.482zM16.949 18.363l-1.367-2.781 2.781 1.367c.523.257.739.891.482 1.414-.258.523-.891.739-1.414.482-.218-.107-.382-.28-.482-.482zM18.362 7.048l-2.782 1.368 1.368-2.782c.257-.523.891-.739 1.414-.482.523.258.739.891.481 1.415-.106.217-.279.381-.481.481zM12 16.5c-2.481 0-4.5-2.019-4.5-4.5s2.019-4.5 4.5-4.5 4.5 2.019 4.5 4.5-2.019 4.5-4.5 4.5zm0-7c-1.379 0-2.5 1.121-2.5 2.5s1.121 2.5 2.5 2.5 2.5-1.121 2.5-2.5-1.121-2.5-2.5-2.5z"></path></g></svg></a></div>
+        <div class="LinkToWeatherSite"><a onclick="window.open('https://jmagdev1.github.io/Weather-App/', '_blank')"><svg id="weather" stroke="currentColor" fill="white" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><g><path d="M14.5 3l-1 3-1-3c-.184-.553.114-1.149.666-1.333.553-.185 1.15.114 1.334.666.075.226.07.458 0 .667zM19.864 6.05l-2.829 1.415 1.415-2.829c.261-.521.894-.731 1.414-.472.521.261.731.894.472 1.415-.107.212-.274.372-.472.471zM21.5 12l-3-1 3-1c.553-.185 1.149.114 1.334.667.184.552-.115 1.148-.668 1.333-.225.075-.457.069-.666 0zM8.55 4.636l1.415 2.829-2.829-1.415c-.521-.261-.732-.894-.472-1.414.261-.521.895-.731 1.414-.472.213.107.373.274.472.472zM17.776 12.342c.139-.424.224-.871.224-1.342 0-2.481-2.019-4.5-4.5-4.5-1.34 0-2.537.594-3.357 1.528l-.143-.028c-1.776 0-3.369.78-4.469 2.011-.24-.08-.472-.086-.697-.011-.553.185-.852.781-.668 1.333.057.167.158.299.277.411-.283.697-.443 1.458-.443 2.256l.002.126c-1.725.445-3.002 2.013-3.002 3.874 0 2.206 1.795 4 4 4h11c2.757 0 5-2.243 5-5 0-2.129-1.344-3.939-3.224-4.658zm-4.276-3.842c1.379 0 2.5 1.121 2.5 2.5 0 .366-.096.706-.238 1.019-.354.021-.72.074-1.118.188-.521-1.353-1.604-2.415-2.967-2.905.456-.49 1.102-.802 1.823-.802zm2.5 11.5h-11c-1.104 0-2-.897-2-2s.896-2 1.908-2.006l1.422.016-.248-1.202c-.055-.263-.082-.536-.082-.808 0-2.206 1.795-4 4-4l.069-.014c1.904.055 3.495 1.406 3.847 3.27l.038.186c.123.436.517.706.946.712l.289-.023c.312-.09.569-.131.811-.131 1.654 0 3 1.346 3 3s-1.346 3-3 3z"></path></g></svg></a></div>
       
     </div>
 
-
-    
   <script src="script.js"></script> 
-
-  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-        const options = {
-        bottom: '87vh', // default: '32px'
-        right: 'unset', // default: '32px'
-        left: '2vw', // default: 'unset'
-        time: '0.5s', // default: '0.3s'
-        mixColor: '#fff', // default: '#fff'
-        backgroundColor: 'transparent',  // default: '#fff'
-        buttonColorDark: '#100f2c',  // default: '#100f2c'
-        buttonColorLight: '#fff', // default: '#fff'
-        saveInCookies: false, // default: true,
-        label: '🌓', // default: ''
-        autoMatchOsTheme: true // default: true
-        }
-        
-        function addDarkmodeWidget() {
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        }
-        window.addEventListener('load', addDarkmodeWidget);
-    </script>
-
 
 </body>
 </html>
