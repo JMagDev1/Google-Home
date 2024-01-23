@@ -167,9 +167,8 @@ function DarkMode(){
   
     document.getElementById("txt").style.color = "black";
 
-    document.getElementById("moon").style.fill = "black";
-    document.getElementById("sun").style.fill = "black";
-    document.getElementById("weather").style.fill = "black";
+    document.getElementById("SearchBarInput").style.color = "black"
+    document.getElementById("SearchBarInput").style.border.color = "black";
 }
 
 function LightMode(){
@@ -224,11 +223,6 @@ function LightMode(){
 
     document.getElementById("txt").style.color = "white";
 
-    document.getElementsByClassName("txtbx-1").style.color = "white"
-    document.getElementsByClassName("txtbx-1").style.border.color = "white";
-
-    document.getElementById("moon").style.fill = "white";
-    document.getElementById("sun").style.fill = "white";
-    document.getElementById("weather").style.fill = "white";
-  
+    document.getElementById("SearchBarInput").style.color = "white"
+    document.getElementById("SearchBarInput").style.border.color = "white";  
 }

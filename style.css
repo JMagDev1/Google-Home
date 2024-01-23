@@ -22,14 +22,14 @@ body, html {
     background-color: transparent;
     border: none;
     padding-left: 2vw;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 #BtnDarkMode:hover,
 #BtnLightMode:hover{
     cursor: pointer;
 }
-
-
 
 .container {
     position: relative;
