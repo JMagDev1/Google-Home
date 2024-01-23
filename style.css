@@ -21,7 +21,7 @@ body, html {
 #BtnLightMode{
     background-color: transparent;
     border: none;
-    padding-left: 2vw;
+    
     width: 2.5em;
     height: 2.5em;
 }
