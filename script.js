@@ -3,20 +3,29 @@ var height = screen.height;
 
 var containers = document.querySelectorAll('.container');
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   // Get the elements with the class "container"
-  
+function AddBackgroundBlurLight(){
+  // Check if any element was found
+  if (containers.length > 0) {
+    // Set the color for each container
+    containers.forEach(function(container) {
+      container.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
+    });
+  } else {
+    console.error('No element with class "container" found on the page.');
+  }
+}
 
-//   // Check if any element was found
-//   if (containers.length > 0) {
-//     // Set the color for each container
-//     containers.forEach(function(container) {
-//       container.style.backgroundColor = 'rgba(0, 0, 0, 0.55)';
-//     });
-//   } else {
-//     console.error('No element with class "container" found on the page.');
-//   }
-// });
+function AddBackgroundBlurDark(){
+  // Check if any element was found
+  if (containers.length > 0) {
+    // Set the color for each container
+    containers.forEach(function(container) {
+      container.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+    });
+  } else {
+    console.error('No element with class "container" found on the page.');
+  }
+}
 
 window.onload = function GetBGImage() {
   var img = new Image();
@@ -169,6 +178,7 @@ function DarkMode(){
 
     document.getElementById("SearchBarInput").style.color = "black"
     document.getElementById("SearchBarInput").style.border.color = "black";
+    AddBackgroundBlurDark();
 }
 
 function LightMode(){
@@ -224,5 +234,6 @@ function LightMode(){
     document.getElementById("txt").style.color = "white";
 
     document.getElementById("SearchBarInput").style.color = "white"
-    document.getElementById("SearchBarInput").style.border.color = "white";  
+    document.getElementById("SearchBarInput").style.border.color = "white";
+    AddBackgroundBlurLight();  
 }
