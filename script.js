@@ -1,6 +1,6 @@
 window.onload = function GetBGImage() {
   var img = new Image();
-  img.src = "https://source.unsplash.com/" + width + "x" + height + "/?" + "landscape&";
+  img.src = "https://source.unsplash.com/" + width + "x" + height + "/?" + "nature&";
 
   // Event handler for when the image is loaded
   img.onload = function () {
@@ -33,7 +33,7 @@ function AddBackgroundBlurLight(){
   if (containers.length > 0) {
     // Set the color for each container
     containers.forEach(function(container) {
-      container.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+      container.style.backgroundColor = 'rgba(255, 255, 255, 0.35)';
     });
   } else {
     console.error('No element with class "container" found on the page.');
